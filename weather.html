@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Forecast Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class="Welcome"><i class="fas fa-cloud-sun"></i> Weather Forecast</h1>
+      <p>Get real-time weather information for any city worldwide</p>
+    </header>
+    
+    <div class="dashboard">
+      <div class="card search-card">
+        <div class="search-container">
+          <input type="text" id="search" placeholder="Enter city name" spellcheck="false">
+          <button id="search-btn">
+            <img src="https://www.citypng.com/public/uploads/preview/download-blue-search-icon-button-png-7017516949747893a50ute33v.png" alt="Search">
+          </button>
+        </div>
+        
+        <div class="unit-toggle">
+          <button class="unit-btn active" data-unit="metric">°C</button>
+          <button class="unit-btn" data-unit="imperial">°F</button>
+        </div>
+        
+        <div class="recent-searches">
+          <h3>Recent Searches</h3>
+          <div class="recent-list">
+            <div class="recent-item">London</div>
+            <div class="recent-item">Paris</div>
+           
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="error">
+          <p><i class="fas fa-exclamation-triangle"></i> City not found. Please try another name.</p>
+        </div>
+        
+        <div class="weather-display">
+          <img src="https://icon-library.com/images/rainy-weather-icon/rainy-weather-icon-6.jpg" class="weather-icon" alt="Weather Icon">
+          <h1 class="temp">25°C</h1>
+          <h2 class="city">Michigan</h2>
+          <div class="details">
+            <div class="detail-item">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO1BbvZ3xwLC-3-j0KZl7GunUqywnPEa9tnw&s" alt="Humidity">
+              <div class="detail-text">
+                <p class="humidity">50%</p>
+                <p>Humidity</p>
+              </div>
+            </div>
+            <div class="detail-item">
+              <img src="https://static.vecteezy.com/system/resources/thumbnails/017/444/153/small_2x/hand-drawn-wind-air-flow-icon-free-breath-symbol-fresh-air-flow-sign-doodle-wind-blow-icons-weather-symbol-climate-design-element-illustration-isolated-on-white-background-vector.jpg" alt="Wind Speed">
+              <div class="detail-text">
+                <p class="wind">15 km/h</p>
+                <p>Wind Speed</p>
+              </div>
+            </div>
+            <div class="detail-item">
+              <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="Pressure">
+              <div class="detail-text">
+                <p class="pressure">1015 hPa</p>
+                <p>Pressure</p>
+              </div>
+            </div>
+            <div class="detail-item">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKulc32jes9p037eYPy_Jt7TDKanwdHdhYRA&s" alt="Feels Like">
+              <div class="detail-text">
+                <p class="feels-like">26°C</p>
+                <p>Feels Like</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card forecast">
+        <h3>5-Day Forecast</h3>
+        <div class="forecast-items">
+          <div class="forecast-item">
+            <div class="forecast-day">Monday</div>
+            <img src="https://icon-library.com/images/rainy-weather-icon/rainy-weather-icon-6.jpg" class="forecast-icon" alt="Sunny">
+            <div class="forecast-temp"></div>
+          </div>
+          <div class="forecast-item">
+            <div class="forecast-day">Tuesday</div>
+            <img src="https://cdn-icons-png.flaticon.com/512/1146/1146857.png" class="forecast-icon" alt="Cloudy">
+            <div class="forecast-temp"></div>
+          </div>
+          <div class="forecast-item">
+            <div class="forecast-day">Wednesday</div>
+            <img src="https://cdn-icons-png.flaticon.com/512/414/414927.png" class="forecast-icon" alt="Rain">
+            <div class="forecast-temp"></div>
+          </div>
+          <div class="forecast-item">
+            <div class="forecast-day">Thursday</div>
+            <img src="https://icon-library.com/images/rainy-weather-icon/rainy-weather-icon-6.jpg" class="forecast-icon" alt="Sunny">
+            <div class="forecast-temp"></div>
+          </div>
+          <div class="forecast-item">
+            <div class="forecast-day">Friday</div>
+            <img src="https://cdn-icons-png.flaticon.com/512/1146/1146857.png" class="forecast-icon" alt="Cloudy">
+            <div class="forecast-temp"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <footer>
+      <p>Weather Dashboard &copy; 2023 | Using OpenWeatherMap API</p>
+    </footer>
+  </div>
+
+  <script src="script/weather.js"></script>
+</body>
+</html>

@@ -1,0 +1,355 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
+  color: #fff;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  padding: 20px 0 40px;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+h1.Welcome {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+h1.Welcome::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 140%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 150px;
+  background-image: url('https://static.vecteezy.com/system/resources/thumbnails/009/225/339/small_2x/welcome-to-michigan-vintage-rusty-metal-sign-illustration-state-map-in-grunge-style-with-typography-hand-drawn-lettering-vector.jpg'); 
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h1.Welcome:hover::after {
+  opacity: 1;
+}
+
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .dashboard {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  box-shadow: 25px 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card.search-card {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.search-container {
+  display: flex;
+  gap: 10px;
+}
+
+.search-container input {
+  flex: 1;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-container input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-container button {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-container button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+.search-container button img {
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+  transition: transform 0.3s ease;
+}
+
+.search-container button:hover img {
+  transform: scale(1.1);
+}
+
+.recent-searches {
+  margin-top: 20px;
+}
+
+.recent-searches h3 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.recent-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.recent-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.recent-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.weather-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.weather-icon {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+  transition: transform 0.5s ease;
+}
+
+.weather-display:hover .weather-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.temp {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.Welcome  {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.Welcome ::after {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 100px;
+  background-image: url('https://yt3.googleusercontent.com/bHvqq9NKGJ-AcnNgFMexkd5t5ZS8AJS94oKxBkPRHZjUuYEeinM4Liq8nRD7f8zeCF9suanZ=s900-c-k-c0x00ffffff-no-rj');
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.city:hover::after {
+  opacity: 1;
+}
+
+
+.city {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.detail-item img {
+  width: 40px;
+  height: 40px;
+}
+
+.detail-text p:first-child {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.detail-text p:last-child {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.forecast {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.forecast h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.forecast-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.forecast-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+}
+
+.forecast-day {
+  font-weight: bold;
+  width: 100px;
+}
+
+.forecast-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.forecast-temp {
+  font-weight: bold;
+  width: 80px;
+  text-align: right;
+}
+
+.error {
+  background: rgba(255, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  display: none;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 0 20px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.unit-toggle {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.unit-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.unit-btn.active {
+  background: rgba(255, 255, 255, 0.3);
+  font-weight: bold;
+}
